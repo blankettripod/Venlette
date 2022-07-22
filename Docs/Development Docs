@@ -1,0 +1,13 @@
+File for information to consider when writing code
+
+all functions should be marked "const" and "noexcept" where available
+engine code that client only (e.g. Application::update is client only) should NOT be marked "const" nor "noexcept"
+but parent functions must catch any exceptions to maintain top level "noexcept"
+
+memory allocations should be placed in try catch blocks
+
+all code should log whenever any one of the following requirements:
+    1. an exception is thrown
+    2. mission critical functionality failed
+    3. external control is passed (e.g. a Vulkan draw call would count but mapping a buffer would not unless it failed)
+

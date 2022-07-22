@@ -2,9 +2,9 @@
 // Created by reece on 22/07/22.
 //
 
-#include "Application/Application.h"
-#include "Core/common.h"
+#include "Core/Application/Application.h"
 #include <thread>
+#include "Core/System.h"
 
 namespace Venlette::Entry {
     Application::Application() {
@@ -15,8 +15,10 @@ namespace Venlette::Entry {
 
     }
 
-    void Application::run() {
+    void Application::run() noexcept {
         m_isRunning = true;
+
+        System::Init();
 
         std::thread updateThread([this] {
             while (this->isRunning()) update();
@@ -26,11 +28,13 @@ namespace Venlette::Entry {
             while (this->isRunning()) render();
         });
 
-        updateThread.detach();
-        renderThread.detach();
+        updateThread.join();
+        renderThread.join();
+
+        System::Shutdown();
     }
 
-    void Application::kill() {
+    void Application::kill() noexcept {
         m_isRunning = false;
     }
 

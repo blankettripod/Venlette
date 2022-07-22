@@ -14,8 +14,8 @@ protected:
         if (--runs == 0) {
             kill();
         }
+        VEN_CORE_ERROR("Hello World!");
     }
-
 };
 
 int main() {

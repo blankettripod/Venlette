@@ -4,4 +4,5 @@
 
 #pragma once
 
-// will include logging functions/macros
+#include <iostream>
+#include <memory>
