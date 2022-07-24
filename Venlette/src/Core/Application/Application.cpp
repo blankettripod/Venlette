@@ -8,17 +8,17 @@
 
 namespace Venlette::Entry {
     Application::Application() {
-
+        System::Init();
     }
 
     Application::~Application() {
-
+        System::Shutdown();
     }
 
     void Application::run() noexcept {
         m_isRunning = true;
 
-        System::Init();
+        this->start();
 
         std::thread updateThread([this] {
             while (this->isRunning()) update();
@@ -30,6 +30,8 @@ namespace Venlette::Entry {
 
         updateThread.join();
         renderThread.join();
+
+        this->stop();
 
         System::Shutdown();
     }
