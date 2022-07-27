@@ -10,6 +10,9 @@ class System {
 public:
     static void Init() noexcept;
     static void Shutdown() noexcept;
+
+private:
+    static bool s_initialised;
 };
 
 } // Venlette

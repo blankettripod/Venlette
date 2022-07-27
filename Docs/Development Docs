@@ -11,3 +11,7 @@ all code should log whenever any one of the following requirements:
     2. mission critical functionality failed
     3. external control is passed (e.g. a Vulkan draw call would count but mapping a buffer would not unless it failed)
 
+
+TODO: update code to use dx style signatures e.g. VEN_RESULT myFunction(const WindowInfo* info, Output** ppOutput)
+
+TODO: put all allocations into a try catch block

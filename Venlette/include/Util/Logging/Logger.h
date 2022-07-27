@@ -24,14 +24,26 @@ private:
 
 } // Util
 
-#define VEN_CORE_TRACE(...) ::Venlette::Util::Logger::GetCoreLogger()->trace(__VA_ARGS__, " {}:{}", __FILE__, __LINE__)
-#define VEN_CORE_INFO(...) ::Venlette::Util::Logger::GetCoreLogger()->info(__VA_ARGS__, " {}:{}", __FILE__, __LINE__)
-#define VEN_CORE_WARN(...) ::Venlette::Util::Logger::GetCoreLogger()->warn(__VA_ARGS__, " {}:{}", __FILE__, __LINE__)
-#define VEN_CORE_ERROR(...) ::Venlette::Util::Logger::GetCoreLogger()->error(__VA_ARGS__, " {}:{}", __FILE__, __LINE__)
-#define VEN_CORE_CRITICAL(...) ::Venlette::Util::Logger::GetCoreLogger()->critical(__VA_ARGS__, " {}:{}", __FILE__, __LINE__)
 
-#define VEN_CLIENT_TRACE(...) ::Venlette::Util::Logger::GetClientLogger()->trace(__VA_ARGS__, " {}:{}", __FILE__, __LINE__)
-#define VEN_CLIENT_INFO(...) ::Venlette::Util::Logger::GetClientLogger()->info(__VA_ARGS__, " {}:{}", __FILE__, __LINE__)
-#define VEN_CLIENT_WARN(...) ::Venlette::Util::Logger::GetClientLogger()->warn(__VA_ARGS__, " {}:{}", __FILE__, __LINE__)
-#define VEN_CLIENT_ERROR(...) ::Venlette::Util::Logger::GetClientLogger()->error(__VA_ARGS__, " {}:{}", __FILE__, __LINE__)
-#define VEN_CLIENT_CRITICAL(...) ::Venlette::Util::Logger::GetClientLogger()->critical(__VA_ARGS__, " {}:{}", __FILE__, __LINE__)
+//  static_assert(true, "") is for requiring a semicolon after the call
+#define VEN_CORE_TRACE(...) {auto logger = ::Venlette::Util::Logger::GetCoreLogger(); \
+    if (logger) logger->trace(__VA_ARGS__, " {}:{}", __FILE__, __LINE__);} static_assert(true, "")
+#define VEN_CORE_INFO(...) {auto logger = ::Venlette::Util::Logger::GetCoreLogger(); \
+    if (logger) logger->info(__VA_ARGS__, " {}:{}", __FILE__, __LINE__);} static_assert(true, "")
+#define VEN_CORE_WARN(...) {auto logger = ::Venlette::Util::Logger::GetCoreLogger(); \
+    if (logger) logger->warn(__VA_ARGS__, " {}:{}", __FILE__, __LINE__);} static_assert(true, "")
+#define VEN_CORE_ERROR(...) {auto logger = ::Venlette::Util::Logger::GetCoreLogger(); \
+    if (logger) logger->error(__VA_ARGS__, " {}:{}", __FILE__, __LINE__);} static_assert(true, "")
+#define VEN_CORE_CRITICAL(...) {auto logger = ::Venlette::Util::Logger::GetCoreLogger(); \
+    if (logger) logger->critical(__VA_ARGS__, " {}:{}", __FILE__, __LINE__);} static_assert(true, "")
+
+#define VEN_CLIENT_TRACE(...) {auto logger = ::Venlette::Util::Logger::GetClientLogger(); \
+    if (logger) logger->trace(__VA_ARGS__, " {}:{}", __FILE__, __LINE__);} static_assert(true, "")
+#define VEN_CLIENT_INFO(...) {auto logger = ::Venlette::Util::Logger::GetClientLogger(); \
+    if (logger) logger->info(__VA_ARGS__, " {}:{}", __FILE__, __LINE__);} static_assert(true, "")
+#define VEN_CLIENT_WARN(...) {auto logger = ::Venlette::Util::Logger::GetClientLogger(); \
+    if (logger) logger->warn(__VA_ARGS__, " {}:{}", __FILE__, __LINE__);} static_assert(true, "")
+#define VEN_CLIENT_ERROR(...) {auto logger = ::Venlette::Util::Logger::GetClientLogger(); \
+    if (logger) logger->error(__VA_ARGS__, " {}:{}", __FILE__, __LINE__);} static_assert(true, "")
+#define VEN_CLIENT_CRITICAL(...) {auto logger = ::Venlette::Util::Logger::GetClientLogger(); \
+    if (logger) logger->critical(__VA_ARGS__, " {}:{}", __FILE__, __LINE__);} static_assert(true, "")

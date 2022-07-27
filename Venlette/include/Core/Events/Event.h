@@ -9,19 +9,22 @@ namespace Venlette::Events {
 struct Event {
 enum class Type {
     None=0,
-    WindowClose, WindowMove, WindowGainFocus, WindowLoseFocus,
+    WindowClose, WindowMove, WindowResize, WindowGainFocus,
+    WindowLoseFocus, WindowMaximise, WindowMinimise, WindowRestore,
     MouseMove, MousePress, MouseRelease, MouseScroll,
     KeyboardPress, KeyboardRelease, KeyboardChar,
+    Client
 } type;
 
-enum Category {
+enum class Category {
     None=0,
-    Window,
     Mouse,
+    Window,
     Keyboard,
 } category;
 
-int data[5];
+signed data[5];
+void* pointer;
 };
 
 } // Events

@@ -17,7 +17,7 @@ class IEventListener;
 
 class EventManager {
 public:
-    static void Init() noexcept;
+    static bool Init() noexcept;
     static void Shutdown() noexcept;
 
     static EventManager* Get() noexcept;
@@ -27,7 +27,7 @@ public:
 
     void PollEvents() noexcept;
 
-    void AddEvent(const Event& event) noexcept;
+    void FireEvent(const Event& event) noexcept;
 
 private:
     static EventManager* s_instance;
