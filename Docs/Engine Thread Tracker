@@ -1,6 +1,0 @@
-File for tracking when threads are created and joined
-
-
-Application:
-  thread for update, Destroyed when application quits
-  thread for render, Destroyed when application quits
