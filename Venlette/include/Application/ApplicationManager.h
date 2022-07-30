@@ -3,13 +3,12 @@
 //
 
 #pragma once
+#include "Core/common.h"
 
-namespace Venlette {
-    namespace Application {
+namespace Venlette::Application {
 
-        class ApplicationManager {
+class ApplicationManager {
 
-        };
+};
 
-    } // Venlette
 } // Application

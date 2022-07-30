@@ -2,7 +2,12 @@
 <project version="4">
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
   <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$/Testing" />
+      <file path="$PROJECT_DIR$/Venlette" />
+    </sourceRoots>
     <excludeRoots>
+      <file path="$PROJECT_DIR$/Third_Party" />
       <file path="$PROJECT_DIR$/Venlette/Vendor" />
     </excludeRoots>
   </component>

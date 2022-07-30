@@ -3,13 +3,14 @@
 //
 
 #pragma once
+#include "Core/common.h"
 
-namespace Venlette {
-    namespace Core {
+namespace Venlette::Core {
 
-        class Engine {
+class Engine {
+public:
+    static VEN_RESULT Init() noexcept;
+    static VEN_RESULT Shutdown() noexcept;
+};
 
-        };
-
-    } // Venlette
 } // Core
