@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.22)
 set(CMAKE_CXX_STANDARD 20)
 project(Venlette CXX)
 
-add_library(venlette stub.cpp Venlette/src/Util/Logging.cpp Venlette/include/Util/Logging.h Venlette/include/Core/common.h Venlette/include/Core/internal.h Venlette/include/venlette Venlette/src/Core/Engine.cpp Venlette/include/Core/Engine.h Venlette/src/Application/Application.cpp Venlette/include/Application/Application.h Venlette/src/Application/ApplicationManager.cpp Venlette/include/Application/ApplicationManager.h)
-add_executable(venlette_test stub.cpp Testing/src/main.cpp)
+add_library(venlette STATIC Venlette/src/Util/Logging.cpp Venlette/include/Util/Logging.h Venlette/include/Core/common.h Venlette/include/Core/internal.h Venlette/include/venlette Venlette/src/Core/Engine.cpp Venlette/include/Core/Engine.h Venlette/src/Application/Application.cpp Venlette/include/Application/Application.h)
+add_executable(venlette_test Testing/src/main.cpp)
 
 add_subdirectory(Third_Party/spdlog)
 

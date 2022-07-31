@@ -4,13 +4,12 @@
 
 #pragma once
 
-#include <memory>
 
 #include <spdlog/spdlog.h>
 #include <spdlog/logger.h>
-#include <optional>
 
 #include "Core/common.h"
+#include "Core/internal.h"
 
 namespace Venlette::Util {
 class Logging {

@@ -4,12 +4,25 @@
 
 #include <venlette>
 
+class App : public Venlette::Application::Application {
+public:
+    App() = default;
+    ~App() override = default;
+
+    void start() override {
+        VEN_CLIENT_INFO("Application Message");
+    }
+
+    void update() override {
+        static int runs=5;
+        VEN_CLIENT_INFO("Runs Left: {}", runs);
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        if (!--runs) kill();
+    }
+};
+
 int main() {
-    Venlette::Util::Logging::Shutdown(); // should fail
-    Venlette::Util::Logging::Init(); // should work
-    Venlette::Util::Logging::Init(); // should fail
-    VEN_CLIENT_INFO("Test"); // should work
-    Venlette::Util::Logging::Shutdown(); // should work
-    VEN_CLIENT_INFO("Test"); // should fail
-    Venlette::Util::Logging::Init(); // should fail
+    if (FAILED(Venlette::Core::Engine::Init())) throw std::runtime_error("Failed to initialise engine");
+    Venlette::Core::Engine::UseApplication<App>();
+
 }

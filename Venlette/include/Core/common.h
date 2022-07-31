@@ -13,3 +13,5 @@
 
 #define VEN_SUCCESS (VEN_RESULT)0u
 #define VEN_FAILURE (VEN_RESULT)1u
+
+#include "Util/Logging.h"

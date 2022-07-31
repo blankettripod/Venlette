@@ -4,5 +4,9 @@
 
 #pragma once
 
+#include "Application/Application.h"
+
 #include "Core/common.h"
+#include "Core/Engine.h"
+
 #include "Util/Logging.h"
