@@ -2,12 +2,7 @@
 // Created by reece on 28/07/22.
 //
 #include "Util/Logging.h"
-
-
-#include <new>
-#include <optional>
-
-#include "Core/common.h"
+#include "Core/internal.h"
 
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/basic_file_sink.h"
@@ -72,12 +67,7 @@ namespace Venlette::Util {
 
     Logging* Logging::s_instance = nullptr;
 
-    Logging::Logging() { // has the Logging already been initialized?
-
-        if (m_coreLogger != nullptr || m_clientLogger != nullptr) {
-            spdlog::error("[LOGGING] Already initialized");
-            throw std::runtime_error("Logger already initialised");
-        }
+    Logging::Logging() {
         // create the spdlog sinks
 
         // file sink
@@ -105,8 +95,6 @@ namespace Venlette::Util {
         }
         return s_instance;
     }
-
-
 
     Logging::~Logging() = default;
 } // Util

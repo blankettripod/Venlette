@@ -3,9 +3,5 @@
 //
 #pragma once
 
-#include <memory>
-#include <optional>
-#include <thread>
 
 #include "Core/common.h"
-#include "Util/Logging.h"
