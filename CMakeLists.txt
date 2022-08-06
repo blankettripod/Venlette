@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.22)
 set(CMAKE_CXX_STANDARD 20)
 project(Venlette CXX)
 
-add_library(venlette STATIC Venlette/src/Util/Logging.cpp Venlette/include/Util/Logging.h Venlette/include/Core/common.h Venlette/include/Core/internal.h Venlette/include/venlette Venlette/src/Core/Engine.cpp Venlette/include/Core/Engine.h Venlette/src/Application/Application.cpp Venlette/include/Application/Application.h Venlette/include/Core/Events/Event.h Venlette/src/Core/Events/EventManager.cpp Venlette/include/Core/Events/EventManager.h Venlette/src/Core/Events/IEventListener.cpp Venlette/include/Core/Events/IEventListener.h Venlette/src/Core/Thread/ThreadManager.cpp Venlette/include/Core/Thread/ThreadManager.h)
+add_library(venlette STATIC Venlette/src/Util/Logging.cpp Venlette/include/Util/Logging.h Venlette/include/Core/common.h Venlette/include/Core/internal.h Venlette/include/venlette Venlette/src/Core/Engine.cpp Venlette/include/Core/Engine.h Venlette/src/Application/Application.cpp Venlette/include/Application/Application.h Venlette/include/Core/Events/Event.h Venlette/src/Core/Events/EventManager.cpp Venlette/include/Core/Events/EventManager.h Venlette/src/Core/Events/IEventListener.cpp Venlette/include/Core/Events/IEventListener.h Venlette/src/Core/Thread/ThreadRegistry.cpp Venlette/include/Core/Thread/ThreadRegistry.h)
 add_executable(venlette_test Testing/src/main.cpp)
 
 add_subdirectory(Third_Party/spdlog)

@@ -13,10 +13,7 @@ public:
     }
 
     void update() override {
-        static int runs=5;
-        VEN_CLIENT_INFO("Runs Left: {}", runs);
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-        if (!--runs) kill();
+        kill();
     }
 
     void render() override {
@@ -31,6 +28,8 @@ public:
     void stop() override {
         VEN_CLIENT_INFO("Application Stopping");
     }
+
+    int runs=5;
 };
 
 int main() {

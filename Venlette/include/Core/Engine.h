@@ -7,7 +7,6 @@
 #include "Core/common.h"
 
 #include "Application/Application.h"
-#include "Core/Thread/ThreadManager.h"
 #include "Core/Events/EventManager.h"
 
 namespace Venlette::Core {
@@ -59,10 +58,9 @@ public:
         }
 
         std::thread updateThread([app] {
-            REGISTER_THREAD(Threading::ThreadType::ClientUpdate);
             try {
                 while (app->isRunning() && s_isInitialised) {
-                    Events::EventManager::Get()->PollEvents();
+                    Events::EventManager::PollEvents();
                     app->update();
                 }
             } catch (std::exception& e) {
@@ -75,7 +73,6 @@ public:
         });
 
         std::thread renderThread([app] {
-            REGISTER_THREAD(Threading::ThreadType::ClientRender);
             try {
                 while (app->isRunning() && s_isInitialised) {
                     app->render();

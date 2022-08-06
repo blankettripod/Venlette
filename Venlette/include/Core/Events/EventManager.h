@@ -12,20 +12,13 @@ namespace Venlette::Core{class Engine;}
 
 namespace Venlette::Events {
 
-
-
-    class IEventListener;
-
     class EventManager {
     public:
+        static VEN_RESULT AddListener(IEventListener *listener, Event::Category category=Event::Category::None) noexcept;
+        static VEN_RESULT RemoveListener(const IEventListener *listener) noexcept;
 
-        static EventManager* Get() noexcept;
-
-        VEN_RESULT AddListener(IEventListener *listener, Event::Category category=Event::Category::None) noexcept;
-        VEN_RESULT RemoveListener(const IEventListener *listener) noexcept;
-
-        VEN_RESULT AddEvent(const Event& event) noexcept;
-        VEN_RESULT PollEvents() noexcept;
+        static VEN_RESULT AddEvent(const Event& event) noexcept;
+        static VEN_RESULT PollEvents() noexcept;
 
     protected:
         friend class Venlette::Core::Engine;

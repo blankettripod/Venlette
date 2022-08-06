@@ -48,21 +48,32 @@ namespace Venlette::Util {
         return VEN_SUCCESS;
     }
 
-    std::optional<std::shared_ptr<spdlog::logger>> Logging::GetCoreLogger() const noexcept {
-        if (m_coreLogger == nullptr) {
+    std::optional<std::shared_ptr<spdlog::logger>> Logging::GetCoreLogger() noexcept {
+        if (!s_instance) {
+            spdlog::error("[LOGGING] Failed to get logger: Logger is not available");
+            return std::nullopt;
+        }
+
+        if (s_instance->m_coreLogger == nullptr) {
             spdlog::error("[LOGGING] Cannot Get Core Logging: Not available");
             return std::nullopt;
         }
 
-        return m_coreLogger;
+        return s_instance->m_coreLogger;
     }
 
-    std::optional<std::shared_ptr<spdlog::logger>> Logging::GetClientLogger() const noexcept {
-        if (m_coreLogger == nullptr) {
-            spdlog::error("[LOGGING] Cannot Get Client Logging: Not initialized");
+    std::optional<std::shared_ptr<spdlog::logger>> Logging::GetClientLogger() noexcept {
+        if (!s_instance) {
+            spdlog::error("[LOGGING] Failed to get logger: Logger is not available");
             return std::nullopt;
         }
-        return m_clientLogger;
+
+        if (s_instance->m_clientLogger == nullptr) {
+            spdlog::error("[LOGGING] Cannot Get Core Logging: Not available");
+            return std::nullopt;
+        }
+
+        return s_instance->m_clientLogger;
     }
 
     Logging* Logging::s_instance = nullptr;
@@ -86,14 +97,6 @@ namespace Venlette::Util {
         m_clientLogger = std::make_shared<spdlog::logger>("Client", spdlog::sinks_init_list{fileSink, consoleSink});
         m_clientLogger->set_level(spdlog::level::trace);
 
-    }
-
-    Logging *Logging::Get() noexcept {
-        if (!s_instance) {
-            spdlog::error("[LOGGING] Failed to get logging instance: Instance not available");
-            return nullptr;
-        }
-        return s_instance;
     }
 
     Logging::~Logging() = default;

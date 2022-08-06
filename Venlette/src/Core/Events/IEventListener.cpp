@@ -9,14 +9,14 @@
 
 namespace Venlette::Events {
     IEventListener::IEventListener() noexcept {
-        EventManager::Get()->AddListener(this);
+        EventManager::AddListener(this);
     }
 
     IEventListener::IEventListener(Event::Category category) noexcept {
-        EventManager::Get()->AddListener(this, category);
+        EventManager::AddListener(this, category);
     }
 
     IEventListener::~IEventListener() noexcept {
-        EventManager::Get()->RemoveListener(this);
+        EventManager::RemoveListener(this);
     }
 } // Events
