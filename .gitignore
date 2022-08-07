@@ -11,3 +11,5 @@ _deps
 /bin/*
 /Venlette/Vendor/*
 /build/
+/cmake-build-debug/
+/cmake-build-release/
