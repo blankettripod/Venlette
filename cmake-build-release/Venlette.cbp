@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Venlette"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Third_Party\;CMake Files\Third_Party\spdlog\;CMake Files\Third_Party\spdlog\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/reece/projects/Venlette/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="venlette">
+				<Option output="/home/reece/projects/Venlette/cmake-build-release/libvenlette.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/reece/projects/Venlette/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add option="-DGLFW_INCLUDE_NONE"/>
+					<Add option="-DGLFW_BUILD_STATIC"/>
+					<Add directory="/home/reece/projects/Venlette/Venlette/include"/>
+					<Add directory="/home/reece/projects/Venlette/Third_Party/spdlog/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 venlette"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="venlette/fast">
+				<Option output="/home/reece/projects/Venlette/cmake-build-release/libvenlette.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/reece/projects/Venlette/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add option="-DGLFW_INCLUDE_NONE"/>
+					<Add option="-DGLFW_BUILD_STATIC"/>
+					<Add directory="/home/reece/projects/Venlette/Venlette/include"/>
+					<Add directory="/home/reece/projects/Venlette/Third_Party/spdlog/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 venlette/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="venlette_test">
+				<Option output="/home/reece/projects/Venlette/cmake-build-release/venlette_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/reece/projects/Venlette/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add option="-DGLFW_INCLUDE_NONE"/>
+					<Add option="-DGLFW_BUILD_STATIC"/>
+					<Add directory="/home/reece/projects/Venlette/Venlette/include"/>
+					<Add directory="/home/reece/projects/Venlette/test/include"/>
+					<Add directory="/home/reece/projects/Venlette/Third_Party/spdlog/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 venlette_test"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="venlette_test/fast">
+				<Option output="/home/reece/projects/Venlette/cmake-build-release/venlette_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/reece/projects/Venlette/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add option="-DGLFW_INCLUDE_NONE"/>
+					<Add option="-DGLFW_BUILD_STATIC"/>
+					<Add directory="/home/reece/projects/Venlette/Venlette/include"/>
+					<Add directory="/home/reece/projects/Venlette/test/include"/>
+					<Add directory="/home/reece/projects/Venlette/Third_Party/spdlog/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 venlette_test/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/reece/projects/Venlette/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/reece/projects/Venlette/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spdlog">
+				<Option output="/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog/libspdlog.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add directory="/home/reece/projects/Venlette/Third_Party/spdlog/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog/Makefile&quot;  VERBOSE=1 spdlog"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spdlog/fast">
+				<Option output="/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog/libspdlog.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSPDLOG_COMPILED_LIB"/>
+					<Add directory="/home/reece/projects/Venlette/Third_Party/spdlog/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/../../../../include/c++/12.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog/Makefile&quot;  VERBOSE=1 spdlog/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/reece/projects/Venlette/cmake-build-release/Third_Party/spdlog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/reece/projects/Venlette/Testing/src/main.cpp">
+			<Option target="venlette_test"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/async.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/async_logger-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/async_logger.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/common-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/common.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/backtracer-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/backtracer.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/circular_q.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/console_globals.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/file_helper-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/file_helper.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/fmt_helper.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/log_msg-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/log_msg.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/log_msg_buffer-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/log_msg_buffer.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/mpmc_blocking_q.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/null_mutex.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/os-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/os.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/periodic_worker-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/periodic_worker.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/registry-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/registry.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/synchronous_factory.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/tcp_client-windows.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/tcp_client.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/thread_pool-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/thread_pool.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/udp_client-windows.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/udp_client.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/details/windows_include.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bin_to_hex.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/args.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/chrono.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/color.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/compile.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/core.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/format-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/format.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/locale.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/os.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/ostream.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/printf.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/ranges.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/bundled/xchar.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/chrono.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/compile.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/fmt.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/ostr.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/ranges.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fmt/xchar.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/formatter.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/fwd.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/logger-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/logger.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/pattern_formatter-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/pattern_formatter.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/android_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/ansicolor_sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/ansicolor_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/base_sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/base_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/basic_file_sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/basic_file_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/daily_file_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/dist_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/dup_filter_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/hourly_file_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/mongo_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/msvc_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/null_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/ostream_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/qt_sinks.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/ringbuffer_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/rotating_file_sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/rotating_file_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/stdout_color_sinks-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/stdout_color_sinks.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/stdout_sinks-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/stdout_sinks.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/syslog_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/systemd_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/tcp_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/udp_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/win_eventlog_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/wincolor_sink-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/sinks/wincolor_sink.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/spdlog-inl.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/spdlog.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/stopwatch.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/tweakme.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/include/spdlog/version.h">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/src/async.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/src/cfg.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/src/color_sinks.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/src/file_sinks.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/src/fmt.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/src/spdlog.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/src/stdout_sinks.cpp">
+			<Option target="spdlog"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/include/Application/Application.h">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/include/Core/Engine.h">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/include/Core/Events/Event.h">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/include/Core/Events/EventManager.h">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/include/Core/Events/IEventListener.h">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/include/Core/Thread/ThreadRegistry.h">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/include/Core/common.h">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/include/Core/internal.h">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/include/Util/Logging.h">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/include/venlette">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/src/Application/Application.cpp">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/src/Core/Engine.cpp">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/src/Core/Events/EventManager.cpp">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/src/Core/Events/IEventListener.cpp">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/src/Core/Thread/ThreadRegistry.cpp">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Venlette/src/Util/Logging.cpp">
+			<Option target="venlette"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Third_Party\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/cmake/ide.cmake">
+			<Option virtualFolder="CMake Files\Third_Party\spdlog\cmake\"/>
+		</Unit>
+		<Unit filename="/home/reece/projects/Venlette/Third_Party/spdlog/cmake/utils.cmake">
+			<Option virtualFolder="CMake Files\Third_Party\spdlog\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
