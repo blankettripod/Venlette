@@ -9,4 +9,5 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 /bin/*
-/Venlette/Vendor/spdlog/
+/Venlette/Vendor/*
+/build/
